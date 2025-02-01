@@ -15,7 +15,7 @@
     <meta name="author" content="" />
     <link rel="shortcut icon" href="images/photo_8.jpg" type="" />
 
-    <title> OVAL </title>
+    <title> Oval </title>
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -40,6 +40,17 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+
+    
+<script
+type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+
+<script type="text/javascript">
+emailjs.init("vM-CQsQgv2BB3fM3D")
+</script>
+
   </head>
 
   <body class="sub_page">
@@ -87,29 +98,11 @@
                 </li>
               </ul>
               <div class="user_option">
-                <a href="" class="user_link">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                </a>
-                <a class="cart_link" href="#">
-                  <svg
-                    version="1.1"
-                    id="Capa_1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    x="0px"
-                    y="0px"
-                    viewBox="0 0 456.029 456.029"
-                    style="enable-background: new 0 0 456.029 456.029"
-                    xml:space="preserve"
-                  ></svg>
-                </a>
-                <form class="form-inline">
-                  <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form>
-                <a href="#book" class="order_online"> Order Online </a>
-              </div>
+
+              
+                <a href="book.html" class="order_online">
+                  Order Online
+                </a>              </div>
             </div>
           </nav>
         </div>
@@ -121,37 +114,28 @@
     <section id="book" class="book_section layout_padding">
       <div class="container">
         <div class="heading_container">
-          <h2>Book A Table</h2>
+          <h2 class="text-center">Conacts Us </h2>
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="form_container">
-              <form action="">
-                <div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Your Name"
-                  />
+              <form id="form">
+                <div class="field">
+                  <label for="from_name">Name</label>
+                  <input type="text" name="from_name" id="from_name" placeholder="Enter your name" required />
                 </div>
-                <div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Phone Number"
-                  />
+    
+                <div class="field">
+                  <label for="email_id">Email</label>
+                  <input type="email" name="email_id" id="email_id" placeholder="Enter your email" required />
                 </div>
-                <div>
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Your Email"
-                  />
+    
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" rows="4" placeholder="Write your message here" required></textarea>
                 </div>
-
-                <div class="btn_box">
-                  <button>Book Now</button>
-                </div>
+    
+                <input type="submit" id="button" value="Send Email" />
               </form>
             </div>
           </div>
@@ -163,7 +147,10 @@
         </div>
       </div>
     </section>
-    <!-- end book section -->
+    
+
+ 
+
 
     <!-- footer section -->
     <footer class="footer_section">
@@ -248,6 +235,11 @@
     <script src="js/custom.js"></script>
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <script src="js/sendEmail.js"></script>
     <!-- End Google Map -->
   </body>
 </html>
+
+
+
+
